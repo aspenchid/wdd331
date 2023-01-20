@@ -1,0 +1,9 @@
+
+
+label ~ input{
+    background-color: purple;
+}
+
+li:nth-child(n+6){
+    background-color: purple;
+}

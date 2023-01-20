@@ -1,0 +1,21 @@
+/* fieldset:nth-of-type(2) >p + p{
+    background-color: blue;
+}
+fieldset[title=fieldset2] > p + p{
+    background-color: pink;
+}
+div.help{
+    background-color: greenyellow;
+}
+div .help{
+    background-color: purple; */
+
+.help::before{
+    content: "("
+}
+.help::after{
+    content: ")"
+}
+fieldset:nth-of-type(n+3) p{
+    display: none;
+}
