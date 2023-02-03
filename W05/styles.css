@@ -1,0 +1,59 @@
+ /* Notes about Flexbox: justify-items goes in the column or row whichever one you set it to and align-items
+align self is to the child if you want one item different placement than the other. 
+will align the opposite way. 
+set the display flex to the parent and flexbox will apply to only direct children
+flex wrap is automatically turned OFF so it will just shrink in the size
+default height of flex container is auto so for #2 set the height to wrap the items in multiple rows
+If all items have flex-grow set to 1, the remaining space in the 
+container will be distributed equally to all children. If one of the 
+children has a value of 2, that child would take up twice as much of 
+the space either one of the others
+flex-wrap: wrap is for flex- direction: column and row, but flex-direction and flex-flow will only be for row
+and will override columns to rows */
+
+body{
+    text-align: center;
+    margin: 10px 50px;
+}
+.row-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+.row-grid div.card{
+    border: 5px solid grey;
+    border-radius: 12px;
+    flex: 1 0 auto;
+    padding-bottom: 70px
+}
+.row-grid div.card h2{
+    align-self: flex-end;
+}
+.row-grid div.card img{
+    width: 100%;
+    height: 100%;
+}
+.col-grid{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 3000px;
+    width: 600px;
+    margin: auto;
+    justify-content: center;
+}
+.col-grid div.card{
+    border: 5px solid grey;
+    border-radius: 12px;
+    flex: 1 3 auto;
+    padding-bottom: 70px;
+}
+.col-grid div.card h2{
+    align-self: flex-end;
+}
+.col-grid div.card img{
+    width: 100%;
+    height: 100%;
+}
