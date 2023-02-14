@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .content {
+    width: 80%;
+    height: 500px;
+    border: 1px solid;
+    
+  }
+  
+  .red {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: width 2s, background-color 1s ease 1s, display 5s;
+  /* some things are not animatable so the all 1s does not always work translate x places it over  */
+    &:hover{
+      background-color: pink;
+      width: 200px;
+      height: 200px;
+    }     
+  }
+  
+  .green {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  transition: all 2s;
+  /* some things are not animatable so the all 1s does not always work translate x places it over  */
+    &:hover{
+      transform: translatex(300px);
+      opacity: 0;
+    } 
+  }
+  .yellow {
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    border-radius: 50%;
+      animation: bounce 3s;
+    }
+    @keyframes bounce{
+      50%{
+        transform: translatey(300px);
+        
+      }
+    }
+  .blue {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  
+  }
+  
