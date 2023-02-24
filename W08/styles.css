@@ -1,0 +1,147 @@
+body {
+  overflow: hidden;
+}
+
+.menu {
+  position: absolute;
+}
+
+.content {
+  margin-top: 50px;
+}
+
+span {
+  width: 28px;
+  height: 3px;
+  background-color: grey;
+  border-radius: 4px;
+  position: relative;
+  display: block;
+  transform: rotate(0deg);
+  transition: 2s, background-color 0.1s;
+}
+span:hover {
+  background-color: black;
+}
+span::before {
+  transform: rotate(0deg);
+  transition: 2s, background-color 0.1s;
+  width: 28px;
+  height: 3px;
+  background-color: grey;
+  border-radius: 4px;
+  position: absolute;
+  top: 8px;
+  content: " ";
+}
+span:hover::before {
+  background-color: black;
+}
+span::after {
+  transform: rotate(0deg);
+  transition: 2s, background-color 0.1s;
+  width: 28px;
+  height: 3px;
+  background-color: grey;
+  border-radius: 4px;
+  position: absolute;
+  display: block;
+  top: -8px;
+  content: " ";
+}
+span:hover::after {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu {
+  transform: translatex(-26vw);
+  transition: 2s;
+  background-color: black;
+  width: 25vw;
+  height: 100vh;
+  display: relative;
+  margin-top: -20.75vh;
+}
+.menu span {
+  margin: -170px 26vw;
+}
+.menu .links {
+  width: 55px;
+  margin: 50px 0px 0px 10px;
+}
+.menu li {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 3px;
+}
+.menu a {
+  color: grey;
+  font-size: 1.5em;
+}
+.menu a:hover {
+  color: white;
+}
+
+.open {
+  transform: translatex(-1vw);
+  transition: 2s;
+}
+.open span {
+  transform: rotate(45deg);
+  transition: 2s, background-color 0.1s;
+  margin: -170px 20vw;
+}
+.open span::before {
+  transform: rotate(90deg) translateX(-8px);
+  transition: 2s, background-color 0.1s;
+}
+.open span::after {
+  transform: rotate(90deg) translateX(8px);
+  transition: 2s, background-color 0.1s;
+}
+.open span:hover {
+  background-color: white;
+}
+.open span:hover::after {
+  background-color: white;
+}
+.open span:hover::before {
+  background-color: white;
+}
+
+@keyframes change-ex1 {
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes change-ex2 {
+  100% {
+    transform: rotate(90deg) translateX(-8px);
+  }
+}
+@keyframes change-ex3 {
+  100% {
+    transform: rotate(90deg) translateX(8px);
+  }
+}
+@keyframes change-ex4 {
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes change-ex5 {
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+@keyframes change-ex6 {
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
