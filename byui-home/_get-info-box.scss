@@ -1,0 +1,55 @@
+@import'variables';
+.get-info-box{
+    width: clamp(250px, 80%, 500px);
+    &__label{
+        display: block;
+        background-color: $light-gray;
+        text-transform: uppercase;
+        
+        padding: .5em ;
+        border-radius: 5px;
+        border: 1px solid $med-gray;
+        cursor: pointer;
+    }
+    &__list{
+        // display: none;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all .5s;
+    }
+    &__toggle{
+        display: none;
+    }
+    &__toggle:checked + &__list{
+        // display: block; this messes with the transition
+        opacity: 1;
+        height: auto;
+    }
+    &__list{
+        list-style-type: none;
+        border-top: transparent;
+        padding: 0;
+        margin:0;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 6px 12px rgb(0 0 0 / 50%);
+        li{
+            border: 1px solid #B4B3B5;
+            border-top: transparent;
+            line-height: 24px;
+            padding: 10px 24px;
+            &:hover{
+                background-color: $light-gray;
+            }
+        }
+        a{
+            color: $link-blue;
+            text-decoration: none;
+        }
+    }
+}
+.icon-triangle-down{
+    float: right;
+}
