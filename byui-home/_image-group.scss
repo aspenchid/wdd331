@@ -1,0 +1,30 @@
+@import 'variables';
+.image-group{
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    &__large{
+        padding: 0 40px;
+    }
+    &__row {
+        border: 1px solid $med-gray;
+        margin: 30px 40px;
+
+    }
+    figure{
+        margin: 0;
+    }
+    figcaption {
+        display: block;
+        color: $link-blue;
+        padding: 10px 0 20px 20px;
+        position: relative;
+        font-weight: 400;
+            span{
+            position: absolute;
+            right: 10px;
+            top: 15px;
+        }
+    }
+}

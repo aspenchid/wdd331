@@ -1,0 +1,53 @@
+@import 'variables';
+header{
+    .icon-byui-logo{
+        background-color: black;
+        padding: 10px 10px 17px 10px;
+        display: inline-block;
+        &::before{
+            display: inline-block;
+            width: 200%;
+            margin: auto;
+            font-size: 23px;
+        }
+    }
+    form{
+        display: none;
+    }
+    h1{
+        background-color: $light-gray;
+        border-bottom: 1px solid $dark-gray;
+        font-size: 20px;
+        font-weight: 300;
+        padding: 15px 90px;
+        margin-top: -1px;
+        color: #525352;
+    }
+}
+.site-banner{
+    display: flex;
+    align-items: center;
+    background-color: $byui-blue;
+    position: relative;
+    a{
+        text-decoration: none;
+    }
+    [class*="icon"]{
+        font-size: 35px;
+        color: white;
+    }
+    .icon-search, .icon-menu, .icon-audience{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    .icon-search{
+        right: 120px;
+    }
+    .icon-audience{
+        right: 75px;
+    }
+}
+body{
+    margin: 0;
+}

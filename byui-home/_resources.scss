@@ -1,0 +1,40 @@
+@import'variables';
+.resources{
+    width: clamp(250px, 80%, 500px);
+    margin: auto;
+    h3{
+        background-color: $dark-gray;
+        color: white;
+        margin-bottom: 0;
+        padding: 10px 24px;
+        font-size: 22px;
+    }
+    ul{
+        list-style-type: none;
+        padding:0;
+        margin:0;
+    }
+    li{
+        border: 1px solid #B4B3B5;
+        line-height: 24px;
+        padding: 10px 24px;
+        position: relative;
+        background-color: #f8f9fa;
+        &:hover{
+            background-color: $light-gray;
+            .icon-angle-right{
+                -webkit-text-stroke: 2px $light-gray;
+            }
+        }
+        a{
+        color: $link-blue;
+        text-decoration: none;
+        }
+    }
+    .icon-angle-right{
+        position: absolute;
+        right: 10px;
+        font-weight:lighter;
+        -webkit-text-stroke: 2px #f8f9fa;
+        }
+}

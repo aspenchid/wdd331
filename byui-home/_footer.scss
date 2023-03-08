@@ -1,0 +1,26 @@
+@import 'variables';
+.footer{
+    background-color: $byui-blue;
+    color: white;
+    padding: 10px 15px;
+    margin: auto;
+    margin-top: 60px;
+    a{
+        text-decoration: none;
+        color: white;
+        display: block;
+        margin: 15px 0;
+        span{
+            margin-right: 10px;
+        }
+    }
+    .whatsapp{
+        margin-left: 27px;
+    }
+    div{
+        display: block;
+    }
+    h3{
+        font-size:24px;
+    }
+}

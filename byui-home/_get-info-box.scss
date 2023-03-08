@@ -1,11 +1,13 @@
 @import'variables';
 .get-info-box{
     width: clamp(250px, 80%, 500px);
+    margin: auto;
+    position: relative;
     &__label{
         display: block;
         background-color: $light-gray;
         text-transform: uppercase;
-        
+        font-weight: bold;
         padding: .5em ;
         border-radius: 5px;
         border: 1px solid $med-gray;
@@ -25,6 +27,7 @@
         // display: block; this messes with the transition
         opacity: 1;
         height: auto;
+        z-index: 1000;
     }
     &__list{
         list-style-type: none;
@@ -32,14 +35,16 @@
         padding: 0;
         margin:0;
         position: absolute;
-        left: 0;
-        width: 100%;
+        right: -10px;
+        left: -10px;
+        width: clamp(520px, 80%, 520px);
         box-shadow: 0 6px 12px rgb(0 0 0 / 50%);
         li{
             border: 1px solid #B4B3B5;
             border-top: transparent;
             line-height: 24px;
             padding: 10px 24px;
+            background-color: white;
             &:hover{
                 background-color: $light-gray;
             }

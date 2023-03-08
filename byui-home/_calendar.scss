@@ -1,0 +1,43 @@
+@import 'variables';
+.calendar{
+    width: clamp(500px, 80%, 700px);
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+    img{
+        display: none;
+    }
+    &__one, &__two, &__three{
+        border-top: 1px solid $dark-gray;
+        padding: 25px 15px;
+        a{
+            text-decoration: none;
+            color: $byui-blue;
+            font-size: 17px;
+        }
+        p{
+            color: $dark-gray;
+            font-size: 15px;
+            line-height: 24px;
+        }
+    }
+    .date{
+        font-size: 11px;
+        font-weight: bold;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+    }
+    button{
+        background-color: $byui-blue;
+        padding: 6px 12px;
+        border: transparent;
+        border-radius: 5px;
+        position: absolute;
+        right:0;
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+    }
+}

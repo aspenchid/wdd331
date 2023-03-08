@@ -1,10 +1,13 @@
 .get-info-box {
   width: clamp(250px, 80%, 500px);
+  margin: auto;
+  position: relative;
 }
 .get-info-box__label {
   display: block;
   background-color: #eaeaea;
   text-transform: uppercase;
+  font-weight: bold;
   padding: 0.5em;
   border-radius: 5px;
   border: 1px solid #b4b3b5;
@@ -22,6 +25,7 @@
 .get-info-box__toggle:checked + .get-info-box__list {
   opacity: 1;
   height: auto;
+  z-index: 1000;
 }
 .get-info-box__list {
   list-style-type: none;
@@ -29,8 +33,9 @@
   padding: 0;
   margin: 0;
   position: absolute;
-  left: 0;
-  width: 100%;
+  right: -10px;
+  left: -10px;
+  width: clamp(520px, 80%, 520px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 .get-info-box__list li {
@@ -38,6 +43,7 @@
   border-top: transparent;
   line-height: 24px;
   padding: 10px 24px;
+  background-color: white;
 }
 .get-info-box__list li:hover {
   background-color: #eaeaea;
@@ -1058,6 +1064,241 @@
 
 .icon-youtube:before {
   content: "\e9f2";
+}
+
+header .icon-byui-logo {
+  background-color: black;
+  padding: 10px 10px 17px 10px;
+  display: inline-block;
+}
+header .icon-byui-logo::before {
+  display: inline-block;
+  width: 200%;
+  margin: auto;
+  font-size: 23px;
+}
+header form {
+  display: none;
+}
+header h1 {
+  background-color: #eaeaea;
+  border-bottom: 1px solid #727272;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 15px 90px;
+  margin-top: -1px;
+  color: #525352;
+}
+
+.site-banner {
+  display: flex;
+  align-items: center;
+  background-color: #056cb6;
+  position: relative;
+}
+.site-banner a {
+  text-decoration: none;
+}
+.site-banner [class*=icon] {
+  font-size: 35px;
+  color: white;
+}
+.site-banner .icon-search, .site-banner .icon-menu, .site-banner .icon-audience {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+.site-banner .icon-search {
+  right: 120px;
+}
+.site-banner .icon-audience {
+  right: 75px;
+}
+
+body {
+  margin: 0;
+}
+
+.image-group img {
+  width: 100%;
+  height: 100%;
+}
+.image-group__large {
+  padding: 0 40px;
+}
+.image-group__row {
+  border: 1px solid #b4b3b5;
+  margin: 30px 40px;
+}
+.image-group figure {
+  margin: 0;
+}
+.image-group figcaption {
+  display: block;
+  color: #0076b6;
+  padding: 10px 0 20px 20px;
+  position: relative;
+  font-weight: 400;
+}
+.image-group figcaption span {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.resources {
+  width: clamp(250px, 80%, 500px);
+  margin: auto;
+}
+.resources h3 {
+  background-color: #727272;
+  color: white;
+  margin-bottom: 0;
+  padding: 10px 24px;
+  font-size: 22px;
+}
+.resources ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.resources li {
+  border: 1px solid #B4B3B5;
+  line-height: 24px;
+  padding: 10px 24px;
+  position: relative;
+  background-color: #f8f9fa;
+}
+.resources li:hover {
+  background-color: #eaeaea;
+}
+.resources li:hover .icon-angle-right {
+  -webkit-text-stroke: 2px #eaeaea;
+}
+.resources li a {
+  color: #0076b6;
+  text-decoration: none;
+}
+.resources .icon-angle-right {
+  position: absolute;
+  right: 10px;
+  font-weight: lighter;
+  -webkit-text-stroke: 2px #f8f9fa;
+}
+
+.dates {
+  width: clamp(250px, 80%, 500px);
+  margin: auto;
+  margin-top: 30px;
+}
+.dates h3 {
+  background: #056cb6;
+  color: white;
+  font-size: 22px;
+  margin: 0;
+  padding: 10px 20px;
+}
+.dates a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  border-bottom: 1px solid #727272;
+  padding: 8px 20px;
+}
+.dates a:hover {
+  color: #056cb6;
+  background-color: #eaeaea;
+}
+.dates__date1 {
+  font-weight: bolder;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.dates__date2 {
+  font-weight: bolder;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.dates span {
+  flex-grow: 1;
+  max-width: 100%;
+}
+.dates__info1 {
+  flex: 0 0 70%;
+  max-width: 70%;
+}
+.dates__info2 {
+  flex: 0 0 70%;
+  max-width: 70%;
+}
+
+.calendar {
+  width: clamp(500px, 80%, 700px);
+  margin: auto;
+  margin-top: 50px;
+  position: relative;
+}
+.calendar img {
+  display: none;
+}
+.calendar__one, .calendar__two, .calendar__three {
+  border-top: 1px solid #727272;
+  padding: 25px 15px;
+}
+.calendar__one a, .calendar__two a, .calendar__three a {
+  text-decoration: none;
+  color: #056cb6;
+  font-size: 17px;
+}
+.calendar__one p, .calendar__two p, .calendar__three p {
+  color: #727272;
+  font-size: 15px;
+  line-height: 24px;
+}
+.calendar .date {
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.calendar button {
+  background-color: #056cb6;
+  padding: 6px 12px;
+  border: transparent;
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+}
+.calendar button a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #056cb6;
+  color: white;
+  padding: 10px 15px;
+  margin: auto;
+  margin-top: 60px;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin: 15px 0;
+}
+.footer a span {
+  margin-right: 10px;
+}
+.footer .whatsapp {
+  margin-left: 27px;
+}
+.footer div {
+  display: block;
+}
+.footer h3 {
+  font-size: 24px;
 }
 
 *,
