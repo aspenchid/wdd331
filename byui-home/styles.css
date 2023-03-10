@@ -8,6 +8,7 @@
   background-color: #eaeaea;
   text-transform: uppercase;
   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
   padding: 0.5em;
   border-radius: 5px;
   border: 1px solid #b4b3b5;
@@ -37,6 +38,11 @@
   left: -10px;
   width: clamp(520px, 80%, 520px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 60em) {
+  .get-info-box__list {
+    width: inherit;
+  }
 }
 .get-info-box__list li {
   border: 1px solid #B4B3B5;
@@ -1069,16 +1075,25 @@
 header .icon-byui-logo {
   background-color: black;
   padding: 10px 10px 17px 10px;
-  display: inline-block;
+  display: flex;
+}
+@media (min-width: 60em) {
+  header .icon-byui-logo {
+    height: 82px;
+    width: 72px;
+    position: relative;
+    left: 50px;
+  }
 }
 header .icon-byui-logo::before {
   display: inline-block;
-  width: 200%;
   margin: auto;
   font-size: 23px;
 }
-header form {
-  display: none;
+@media (min-width: 60em) {
+  header .icon-byui-logo::before {
+    padding-top: 20px;
+  }
 }
 header h1 {
   background-color: #eaeaea;
@@ -1089,12 +1104,24 @@ header h1 {
   margin-top: -1px;
   color: #525352;
 }
+@media (min-width: 60em) {
+  header h1 {
+    padding: 30px 50px;
+    font-size: 30px;
+    border-bottom: none;
+  }
+}
 
 .site-banner {
   display: flex;
   align-items: center;
   background-color: #056cb6;
   position: relative;
+}
+@media (min-width: 60em) {
+  .site-banner {
+    height: 60px;
+  }
 }
 .site-banner a {
   text-decoration: none;
@@ -1113,6 +1140,28 @@ header h1 {
 }
 .site-banner .icon-audience {
   right: 75px;
+}
+.site-banner .search-desktop {
+  display: none;
+}
+@media (min-width: 60em) {
+  .site-banner .search-desktop {
+    display: inline;
+    position: absolute;
+    right: 170px;
+    top: 15px;
+  }
+}
+@media (min-width: 60em) {
+  .site-banner .search-desktop input {
+    border: 1px solid #727272;
+    border-radius: 4px;
+  }
+}
+@media (min-width: 60em) {
+  .site-banner .search-desktop button {
+    display: none;
+  }
 }
 
 body {
@@ -1190,6 +1239,7 @@ body {
   width: clamp(250px, 80%, 500px);
   margin: auto;
   margin-top: 30px;
+  font-size: 13px;
 }
 .dates h3 {
   background: #056cb6;
@@ -1241,9 +1291,22 @@ body {
 .calendar img {
   display: none;
 }
+@media (min-width: 60em) {
+  .calendar img {
+    display: block;
+    grid-column: 1/2;
+    padding-right: 25px;
+  }
+}
 .calendar__one, .calendar__two, .calendar__three {
   border-top: 1px solid #727272;
   padding: 25px 15px;
+}
+@media (min-width: 60em) {
+  .calendar__one, .calendar__two, .calendar__three {
+    display: grid;
+    grid-template-columns: 25% 75%;
+  }
 }
 .calendar__one a, .calendar__two a, .calendar__three a {
   text-decoration: none;
@@ -1254,10 +1317,14 @@ body {
   color: #727272;
   font-size: 15px;
   line-height: 24px;
+  font-family: "BYUI Merriweather", "Merriweather", "Palatino Linotype", "Book Antiqua", serif;
+}
+.calendar__one h4, .calendar__two h4, .calendar__three h4 {
+  font-weight: 600;
 }
 .calendar .date {
   font-size: 11px;
-  font-weight: bold;
+  font-weight: 900;
   margin-bottom: 6px;
   text-transform: uppercase;
 }
@@ -1275,12 +1342,21 @@ body {
   font-weight: bold;
 }
 
-.footer {
+footer {
   background-color: #056cb6;
   color: white;
   padding: 10px 15px;
   margin: auto;
   margin-top: 60px;
+}
+
+@media (min-width: 60em) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 980px;
+    margin: auto;
+  }
 }
 .footer a {
   text-decoration: none;
@@ -1299,6 +1375,60 @@ body {
 }
 .footer h3 {
   font-size: 24px;
+}
+.footer [class*=column] {
+  padding: 10px;
+}
+
+@media (min-width: 60em) {
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+}
+
+@media (min-width: 60em) {
+  .image-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+@media (min-width: 60em) {
+  .image-group__row1 {
+    flex: 0 0 33%;
+    max-width: 30%;
+  }
+}
+@media (min-width: 60em) {
+  .image-group__row2 {
+    flex: 33% 0 0;
+    max-width: 30%;
+  }
+}
+@media (min-width: 60em) {
+  .image-group__row3 {
+    flex: 33% 0 0;
+    max-width: 30%;
+  }
+}
+@media (min-width: 60em) {
+  .image-group__small {
+    flex: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    margin: 25px 20px;
+  }
+}
+@media (min-width: 60em) {
+  .image-group__row {
+    margin: 5px 10px;
+  }
 }
 
 *,

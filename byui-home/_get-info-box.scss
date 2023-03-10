@@ -8,6 +8,7 @@
         background-color: $light-gray;
         text-transform: uppercase;
         font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
         padding: .5em ;
         border-radius: 5px;
         border: 1px solid $med-gray;
@@ -38,6 +39,9 @@
         right: -10px;
         left: -10px;
         width: clamp(520px, 80%, 520px);
+        @media (min-width: $break-large) {
+            width: inherit;
+        }
         box-shadow: 0 6px 12px rgb(0 0 0 / 50%);
         li{
             border: 1px solid #B4B3B5;

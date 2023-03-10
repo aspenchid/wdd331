@@ -2,17 +2,22 @@
 header{
     .icon-byui-logo{
         background-color: black;
+        @media (min-width: $break-large) {
+            height: 82px;
+            width: 72px;
+            position: relative;
+            left: 50px;
+        }
         padding: 10px 10px 17px 10px;
-        display: inline-block;
+        display: flex;
         &::before{
             display: inline-block;
-            width: 200%;
             margin: auto;
             font-size: 23px;
+            @media (min-width: $break-large) {
+            padding-top: 20px;   
+            }
         }
-    }
-    form{
-        display: none;
     }
     h1{
         background-color: $light-gray;
@@ -22,6 +27,11 @@ header{
         padding: 15px 90px;
         margin-top: -1px;
         color: #525352;
+        @media (min-width: $break-large) {
+            padding: 30px 50px;
+            font-size: 30px;  
+            border-bottom: none; 
+        }
     }
 }
 .site-banner{
@@ -29,6 +39,9 @@ header{
     align-items: center;
     background-color: $byui-blue;
     position: relative;
+    @media (min-width: $break-large) {
+        height: 60px;
+        }
     a{
         text-decoration: none;
     }
@@ -47,7 +60,32 @@ header{
     .icon-audience{
         right: 75px;
     }
+    .search-desktop{
+        display: none;
+        @media (min-width: $break-large) {
+            display: inline;
+            position: absolute;
+            right: 170px;
+            top: 15px;  
+        }
+        input{
+        @media (min-width: $break-large) {  
+            border: 1px solid $dark-gray;
+            border-radius: 4px; 
+        }  
+        }
+        button{
+        @media (min-width: $break-large) {
+            display: none;  
+        }
+        }
+    }
 }
 body{
     margin: 0;
+}
+@mixin breakpoint($break) {
+    @if $break == large {
+    @media (max-width: $break-large) { @content; }
+}
 }

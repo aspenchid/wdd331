@@ -6,10 +6,19 @@
     position: relative;
     img{
         display: none;
+        @media (min-width: $break-large) {
+        display: block;
+        grid-column: 1/2;
+        padding-right: 25px;
+        }
     }
     &__one, &__two, &__three{
         border-top: 1px solid $dark-gray;
         padding: 25px 15px;
+        @media (min-width: $break-large) {
+            display: grid;
+            grid-template-columns: 25% 75%;
+        }
         a{
             text-decoration: none;
             color: $byui-blue;
@@ -19,11 +28,15 @@
             color: $dark-gray;
             font-size: 15px;
             line-height: 24px;
+            font-family: "BYUI Merriweather","Merriweather","Palatino Linotype","Book Antiqua",serif;;
+        }
+        h4{
+            font-weight: 600;
         }
     }
     .date{
         font-size: 11px;
-        font-weight: bold;
+        font-weight: 900;
         margin-bottom: 6px;
         text-transform: uppercase;
     }

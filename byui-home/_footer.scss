@@ -1,10 +1,18 @@
 @import 'variables';
-.footer{
+footer{
     background-color: $byui-blue;
     color: white;
     padding: 10px 15px;
     margin: auto;
     margin-top: 60px;
+}
+.footer{
+    @media (min-width: $break-large) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 980px;
+        margin: auto;
+    }
     a{
         text-decoration: none;
         color: white;
@@ -22,5 +30,8 @@
     }
     h3{
         font-size:24px;
+    }
+    [class*='column']{
+        padding: 10px;
     }
 }

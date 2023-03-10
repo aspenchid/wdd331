@@ -1,0 +1,58 @@
+@import 'variables';
+main{
+    @media (min-width: $break-large) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+}
+.image-group{
+    @media (min-width: $break-large) {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;    
+    }
+    &__row1{
+    @media (min-width: $break-large) {
+        flex: 0 0 33%;
+        max-width: 30%;
+        }   
+    }
+    &__row2{
+    @media (min-width: $break-large) {
+        flex: 33% 0 0;
+        max-width: 30%;
+        }   
+    }
+    &__row3{
+    @media (min-width: $break-large) {
+        flex: 33% 0 0;
+        max-width: 30%;
+        }   
+    }
+    &__small{
+    @media (min-width: $break-large) {
+        flex:100%;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        margin: 25px 20px;
+    }
+    }
+    &__row{
+    @media (min-width: $break-large) {
+        margin: 5px 10px;
+    }
+    }
+}
+
+
+
+@mixin breakpoint($break) {
+    @if $break == large {
+    @media (max-width: $break-large) { @content; }
+}
+}
