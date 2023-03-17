@@ -1,0 +1,113 @@
+// sass W09/styles.scss W09/styles.css -w
+@font-face {
+    font-family: "Recursive";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/recursive/v26/8vJN7wMr0mhh-RQChyHEH06TlXhq_gukbYrFMk1QuAIcyEwG_X-dpEfaE5YaERmK-CImKsvxvU-MXGX2fSqasNfUvz2xbXfn1uEQadCCk317tQtBCYCK6v8.woff)
+        format("woff");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+        U+FEFF, U+FFFD;
+}
+@import url("https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..800,0..1,0..1,0..1&display=swap");
+:root {
+    --font-color: #333;
+    --mono: "MONO" 0; 
+    --casl: "CASL" 0; 
+    --wght: 300; 
+    --slnt: 0deg; 
+    --crsv: "CRSV" 0.5; 
+}
+
+* {
+    font-weight: var(--wght);
+    font-style: oblique var(--slnt);
+    font-variation-settings: var(--mono), var(--casl), var(--crsv);
+    margin: 10px 30px;
+    line-height: 1.3rem;
+}
+html{
+    font-size: 1.3em; 
+}
+h2{
+    font-size: 2em;
+    line-height: 2em;
+}
+h3{
+    font-size: 1.6rem;
+    line-height: 1.5em;
+}
+.header{
+    display: flex;
+    margin-left: -70px;
+    margin-bottom: 0;
+}
+.header-banner{
+    margin-bottom: 0;
+}
+header p{
+    margin-bottom: 0;
+}
+.chapter{
+    margin: 0;
+    letter-spacing: -0.05rem;
+    font-size: 0.9rem;
+}
+body{
+    color: var(--font-color);
+    font-family: Recursive, sans-serif;
+    --wght: 350;
+}
+main p:nth-child(1){
+    border-top: dashed black;
+    padding-top: 50px;
+    margin-top: 0;
+}
+main div:nth-child(1){
+    margin-top: 0;
+}
+.mono{
+    margin: 0;
+    --mono: "mono" 1;
+    --wght: 300;
+}
+.alert{
+    margin: 0;
+    border: 20px solid rgba(160, 155, 155, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    text-transform: uppercase;
+    height: 50px;
+    width: auto;
+}
+.para-close{
+    border-left: 1px solid black;
+    padding-left: 15px;
+    line-height: 1.05rem;
+    letter-spacing: -0.05rem;
+    font-size: 0.8rem;
+}
+.alert-message{
+    display: flex;
+    margin: 5vh 0;
+    margin-left: 50px;
+}
+.bold{
+    margin: 0;
+    --wght: 600;
+}
+.bolder{
+    margin: 0;
+    --wght: 700;
+}
+.boldest{
+    margin: 0;
+    --wght: 900;
+}
+ul{
+    list-style-type:none;
+}
+li::first-letter{
+    margin-left: -1em;
+}
