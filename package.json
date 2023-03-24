@@ -19,5 +19,14 @@
     "browser-sync": "^2.26.3",
     "npm-run-all": "^4.1.5",
     "sass": "^1.26.10"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aspenchid/wdd331.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aspenchid/wdd331/issues"
+  },
+  "homepage": "https://github.com/aspenchid/wdd331#readme"
 }
